@@ -1,0 +1,79 @@
+/* 5. Dọn dẹp chung & reset body */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* 1. Style Header */
+header {
+    background-color: #1e3a8a; /* Màu nền tối */
+    color: #ffffff;            /* Màu chữ trắng */
+    padding: 20px;
+    text-align: center;        /* Căn giữa */
+}
+
+/* 2. Style Điều hướng (Nav) */
+nav {
+    background-color: #334155;
+}
+
+nav ul {
+    list-style: none;          /* Bỏ dấu chấm đầu dòng */
+    display: flex;             /* Hiển thị hàng ngang */
+    justify-content: center;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+}
+
+nav a:hover {
+    background-color: #3b82f6;
+}
+
+/* 3. Vùng chứa cột chính và sidebar (Layout 2 cột dùng Flexbox) */
+.container {
+    max-width: 900px;          /* Đặt max-width để không bị giãn quá rộng trên màn hình 4K */
+    margin: 20px auto;         /* Căn giữa trang */
+    padding: 0 15px;           /* Padding hai bên */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+main {
+    flex: 0 0 70%;             /* Chiếm khoảng 70% */
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+aside {
+    flex: 0 0 27%;             /* Chiếm khoảng 25-27% */
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 4. Style Footer */
+footer {
+    text-align: center;
+    background-color: #e2e8f0; /* Màu nền khác với header */
+    color: #475569;
+    padding: 15px;
+    margin-top: 30px;
+    clear: both;               /* Đảm bảo không bị đè đè lên cột float nếu dùng float */
+}
